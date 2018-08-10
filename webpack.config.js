@@ -26,7 +26,12 @@ module.exports = {
 		        query: {
 		          presets: ['react', 'env', 'stage-1']
 		        }
-	       }
+	       	},
+	       	{
+		      	test: /\.js$/,
+		      	exclude: /node_modules/,
+		      	use: ['babel-loader', 'eslint-loader']
+		    	}
 	    ]
 	 },
 	resolve: {

@@ -2,15 +2,27 @@
   "name": "yapsody-online-store",
   "version": "1.0.0",
   "description": "Yapsody Online Store for customers to buy tickets",
-  "main": "build/server.js",
-  "scripts": {
-    "dev": "webpack-dev-server --historyApiFallback true --port 8888 --content-base build/"
-  },
-  "repository": "https://yapsody.git.beanstalkapp.com/reactjs-online-store.git",
   "author": "Yapsody",
+  "main": "build/server.js",
+  "repository": "https://yapsody.git.beanstalkapp.com/reactjs-online-store.git",
+  "scripts": {
+    "dev": "webpack-dev-server --historyApiFallback true --port 8888 --content-base build/",
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "setupFiles": [
+      "./setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
   "dependencies": {
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-1": "^6.24.1",
     "html-webpack-plugin": "3.2.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -22,8 +34,22 @@
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-core": "^6.2.1",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^23.4.2",
     "babel-loader": "7.1.5",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.1.18",
+    "babel-preset-stage-1": "^6.24.1",
+    "enzyme": "3.4.1",
+    "enzyme-adapter-react-16": "1.2.0",
+    "enzyme-to-json": "3.3.4",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "jest": "^23.4.2",
+    "react-test-renderer": "16.4.2",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
   }
