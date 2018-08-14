@@ -1,10 +1,9 @@
 {
-  "name": "yapsody-online-store",
+  "name": "react-redux-boilerplate",
   "version": "1.0.0",
-  "description": "Yapsody Online Store for customers to buy tickets",
-  "author": "Yapsody",
-  "main": "build/server.js",
-  "repository": "https://yapsody.git.beanstalkapp.com/reactjs-online-store.git",
+  "description": "Boilerplate to setup your react-redux app with eslint lint and jest",
+  "author": "Nikita-Jajodia",
+  "repository": "https://github.com/nikitajajodia/react-redux-boilerplate.git",
   "scripts": {
     "dev": "webpack-dev-server --historyApiFallback true --port 8888 --content-base build/",
     "test": "jest"

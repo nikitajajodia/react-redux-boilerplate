@@ -6,7 +6,7 @@ export default function LoginPage() {
       <section className='login-box'>
         <div className='login-box-body'>
           <h1 className='text-center'>
-            Login
+            HomePage
           </h1>
         </div>
       </section>

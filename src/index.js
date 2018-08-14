@@ -10,7 +10,7 @@ import {
   Switch
 } from 'react-router-dom';
 
-import { LoginPage } from './screens';
+import { HomePage } from './screens';
 
 import {
   Provider
@@ -25,7 +25,7 @@ class App extends React.Component {
     	<Provider store={store}>
     		<BrowserRouter history={browserHistory}>
             <Switch>
-            	<Route exact path="/" component={LoginPage} />
+            	<Route exact path="/" component={HomePage} />
             </Switch>
             </BrowserRouter>
     	</Provider>
