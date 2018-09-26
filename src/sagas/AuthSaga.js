@@ -1,17 +1,15 @@
 import {
   take,
-  put,
   fork,
-  call
 } from 'redux-saga/effects';
 import actionTypes from '../actions/actionTypes';
 
 function* login() {
   while (true) {
-  	const request = yield take(actionTypes.LOGIN);
-  	if(request == 'test') {
-	  	console.log("auth");
-  	}
+    const request = yield take(actionTypes.LOGIN);
+    if (request === 'test') {
+      console.log('auth');
+    }
   }
 }
 

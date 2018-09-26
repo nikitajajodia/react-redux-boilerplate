@@ -6,7 +6,9 @@
   "repository": "https://github.com/nikitajajodia/react-redux-boilerplate.git",
   "scripts": {
     "dev": "webpack-dev-server --historyApiFallback true --port 8888 --content-base build/",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ./src",
+    "lintfix": "eslint ./src --fix"
   },
   "jest": {
     "verbose": true,
@@ -22,6 +24,8 @@
     ]
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
     "html-webpack-plugin": "3.2.0",
     "immutable": "^3.8.2",
     "react": "^16.4.2",
@@ -30,10 +34,10 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
     "redux-form": "^7.4.2",
+    "redux-immutable": "^4.0.0",
     "redux-saga": "^0.16.0",
     "save": "^2.3.2",
-    "webpack": "^4.16.5",
-    "redux-immutable": "^4.0.0"
+    "webpack": "^4.16.5"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
@@ -52,6 +56,7 @@
     "eslint-loader": "^2.1.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
     "jest": "^23.4.2",
     "react-test-renderer": "16.4.2",
     "webpack-cli": "^3.1.0",

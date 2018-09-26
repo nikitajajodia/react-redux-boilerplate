@@ -1,7 +1,7 @@
 const initialState = {
-	user: 'true'
-}
+  user: 'true',
+};
 
-export default function authReducer(state = initialState, action) {
-	return state;
+export default function authReducer(state = initialState) {
+  return state;
 }

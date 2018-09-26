@@ -7,6 +7,6 @@ import {
 import authObject from './AuthReducer';
 
 export default combineReducers({
-	authObject,
-	form,
+  authObject,
+  form,
 });

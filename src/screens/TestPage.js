@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default function LoginPage() {
+export default function TestPage() {
   return (
     <div className="wrapper">
       <section className="login-box">
         <div className="login-box-body">
           <h1 className="text-center">
-            HomePage
+            TEST
           </h1>
         </div>
       </section>
