@@ -13,7 +13,10 @@ import {
 import {
   Provider,
 } from 'react-redux';
+
 import { HomePage } from './screens';
+
+import './style/main.scss';
 
 
 import configureStore from './store';

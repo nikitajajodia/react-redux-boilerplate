@@ -5,7 +5,7 @@ const webpack = require('webpack');
 module.exports = {
 	mode: 'development',
 	entry: {
-		app: ['./src/index.js']
+		app: ['./src/index.jsx']
 	},
 	output: {
 		path: path.join(__dirname, './build'),
@@ -20,7 +20,7 @@ module.exports = {
 	module: {
 	    rules: [
 	      	{
-		        test: /\.js$/,
+		        test:/\.(js|jsx)$/,
 		        exclude: /(node_modules|bower_components)/,
 		        loader: 'babel-loader',
 		        query: {
@@ -31,7 +31,15 @@ module.exports = {
 		      	test: /\.js$/,
 		      	exclude: /node_modules/,
 		      	use: ['babel-loader', 'eslint-loader']
-		    	}
+		    },
+		    {
+		    	test: /\.(scss|css)$/,
+	            use: [
+	                "style-loader", // creates style nodes from JS strings
+	                "css-loader", // translates CSS into CommonJS
+	                "sass-loader" // compiles Sass to CSS, using Node Sass by default
+	            ]
+		    }
 	    ]
 	 },
 	resolve: {
